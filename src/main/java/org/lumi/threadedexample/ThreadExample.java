@@ -1,5 +1,6 @@
 package org.lumi.threadedexample;
 
+import java.io.InputStream;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -16,7 +17,10 @@ import static java.util.stream.Collectors.groupingByConcurrent;
  */
 public class ThreadExample {
     public static void main(String[] args) {
-        Path path1 = Paths.get("./input/5000-8.txt");
+
+
+        InputStream io = this.getClass().getResourceAsStream("5000-8.txt");
+        Path path1 = Paths.get("./resource/5000-8.txt");
         Path path2 = Paths.get("./input/pg4300.txt");
         Path path3 = Paths.get("./input/pg20417.txt");
 

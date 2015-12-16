@@ -16,9 +16,9 @@ import static java.util.stream.Collectors.groupingByConcurrent;
  */
 public class ThreadExample {
     public static void main(String[] args) {
-        Path path1 = Paths.get("/home/lumi/IdeaProjects/ThreadedExample/input/5000-8.txt");
-        Path path2 = Paths.get("/home/lumi/IdeaProjects/ThreadedExample/input/5000-8.txt");
-        Path path3 = Paths.get("/home/lumi/IdeaProjects/ThreadedExample/input/5000-8.txt");
+        Path path1 = Paths.get("./input/5000-8.txt");
+        Path path2 = Paths.get("./input/pg4300.txt");
+        Path path3 = Paths.get("./input/pg20417.txt");
 
         try {
             Stream<String> stream1 = Files.lines(path1, Charset.forName("ISO-8859-1"));

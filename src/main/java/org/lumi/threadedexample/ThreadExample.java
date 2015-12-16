@@ -1,6 +1,7 @@
 package org.lumi.threadedexample;
 
-import java.io.InputStream;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -17,12 +18,9 @@ import static java.util.stream.Collectors.groupingByConcurrent;
  */
 public class ThreadExample {
     public static void main(String[] args) {
-
-
-        InputStream io = this.getClass().getResourceAsStream("5000-8.txt");
-        Path path1 = Paths.get("./resource/5000-8.txt");
-        Path path2 = Paths.get("./input/pg4300.txt");
-        Path path3 = Paths.get("./input/pg20417.txt");
+        Path path1 = Paths.get("./resource/big1.txt");
+        Path path2 = Paths.get("./resource/big2.txt");
+        Path path3 = Paths.get("./resource/big3.txt");
 
         try {
             Stream<String> stream1 = Files.lines(path1, Charset.forName("ISO-8859-1"));

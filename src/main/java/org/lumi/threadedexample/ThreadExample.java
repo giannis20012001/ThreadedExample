@@ -14,7 +14,7 @@ public class ThreadExample {
     public static void main(String[] args) {
         try {
             long start = System.currentTimeMillis();
-            Map<String,Long> counts = ForkJoinWordCount.wordCount("/home/lumi/IdeaProjects/ThreadedExample/src/main/resources");
+            Map<String,Long> counts = ForkJoinWordCount.wordCount("/home/ubuntu/resources");
             /*logger.info("Counts" + counts);*/
 
             System.out.println("time taken concurrent:" + (System.currentTimeMillis() - start));
